@@ -14,6 +14,11 @@ class Eletrodomestico extends Produto
         $this->definirVoltagem($voltagem);
     }
 
+    public function defineCodigoBarras(string $codigo): void
+    {
+        $this->codigoBarras = $codigo;
+    }
+
     public function definirVoltagem(int $voltagem): void
     {
         if ($voltagem === 110 || $voltagem === 220) {

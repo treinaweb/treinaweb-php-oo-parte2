@@ -14,6 +14,11 @@ class Microondas extends Eletrodomestico
         $this->definirPotencia($potencia);
     }
 
+    final public function defineCodigoBarras(string $codigo): void
+    {
+        $this->codigoBarras = $codigo;
+    }
+
     public function definirPotencia(int $potencia): void
     {
         $this->potencia = $potencia;
