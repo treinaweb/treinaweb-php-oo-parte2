@@ -6,6 +6,8 @@ class Microondas extends Eletrodomestico
 {
     public int $potencia;
 
+    public string $descricao = "Microondas em geral";
+
     public function __construct(string $titulo, int $voltagem, int $potencia)
     {
         parent::__construct($titulo, $voltagem);

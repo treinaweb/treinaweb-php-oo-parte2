@@ -6,6 +6,8 @@ class Eletrodomestico extends Produto
 {
     public int $voltagem;
 
+    public string $descricao = "Eletrodomestico em geral";
+
     public function __construct(string $titulo, int $voltagem)
     {
         parent::__construct($titulo);
