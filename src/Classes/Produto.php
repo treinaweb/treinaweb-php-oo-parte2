@@ -12,6 +12,11 @@ class Produto
 
     public float $preco;
 
+    public function __construct(string $titulo)
+    {
+        $this->titulo = $titulo;
+    }
+
     public function defineCodigoBarras(string $codigo): void
     {
         $this->codigoBarras = $codigo;
