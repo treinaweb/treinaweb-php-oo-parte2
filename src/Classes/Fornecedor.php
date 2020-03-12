@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Classes;
 
-class Fornecedor 
+final class Fornecedor 
 {
     public const PAIS = "Brasil";
 
