@@ -10,7 +10,7 @@ class Produto
 
     public string $descricao = "Produtos em geral";
 
-    public float $preco;
+    protected float $preco;
 
     public function __construct(string $titulo)
     {
@@ -30,5 +30,6 @@ class Produto
     public function detalhes(): void
     {
         echo "<br>Nome do produto: " . $this->titulo . "<br>";
+        echo "<br>Preço do produto: " . $this->preco . "<br>";
     }
 }

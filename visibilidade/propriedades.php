@@ -6,5 +6,6 @@ $prod = new App\Classes\Produto("Cerveja");
 
 $geladeira = new App\Classes\Eletrodomestico("geladeira", 110);
 
-$geladeira->detalhes();
+$geladeira->definePreco(4500.55);
 
+$geladeira->detalhes();

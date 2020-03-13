@@ -14,6 +14,11 @@ class Eletrodomestico extends Produto
         $this->definirVoltagem($voltagem);
     }
 
+    public function definePreco(float $preco): void
+    {
+        $this->preco = $preco;
+    }
+
     public function defineCodigoBarras(string $codigo): void
     {
         $this->codigoBarras = $codigo;
