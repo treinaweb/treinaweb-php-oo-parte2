@@ -8,4 +8,6 @@ $geladeira = new App\Classes\Eletrodomestico("geladeira", 110);
 
 $geladeira->definePreco(4500.55);
 
+$geladeira->descricao = "Geladeira modelo x2000";
+
 $geladeira->detalhes();

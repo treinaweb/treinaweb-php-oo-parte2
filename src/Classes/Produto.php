@@ -31,5 +31,6 @@ class Produto
     {
         echo "<br>Nome do produto: " . $this->titulo . "<br>";
         echo "<br>Preço do produto: " . $this->preco . "<br>";
+        echo "<br>Descrição do produto: " . $this->descricao . "<br>";
     }
 }
