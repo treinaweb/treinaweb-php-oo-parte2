@@ -22,9 +22,14 @@ class Produto
         $this->codigoBarras = $codigo;
     }
 
-    public function acessaCodigoBarras(): void
+    private function acessaCodigoBarras(): void
     {
-        echo "<br>" . $this->codigoBarras;
+        echo "<br>Código de barras do produto: " . $this->codigoBarras;
+    }
+
+    public function definePreco(float $preco): void
+    {
+        $this->preco = $preco;
     }
 
     public function detalhes(): void
@@ -32,5 +37,6 @@ class Produto
         echo "<br>Nome do produto: " . $this->titulo . "<br>";
         echo "<br>Preço do produto: " . $this->preco . "<br>";
         echo "<br>Descrição do produto: " . $this->descricao . "<br>";
+        $this->acessaCodigoBarras();
     }
 }
