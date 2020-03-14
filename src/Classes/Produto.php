@@ -10,7 +10,9 @@ class Produto
 
     public string $descricao = "Produtos em geral";
 
-    protected float $preco;
+    private float $preco;
+
+    protected string $codigoBarras;
 
     public function __construct(string $titulo)
     {
@@ -19,7 +21,10 @@ class Produto
 
     public function defineCodigoBarras(string $codigo): void
     {
-        $this->codigoBarras = $codigo;
+        if (\strlen($codigo) > 2) {
+            $this->codigoBarras = $codigo;
+        }
+        
     }
 
     private function acessaCodigoBarras(): void
@@ -29,7 +34,9 @@ class Produto
 
     public function definePreco(float $preco): void
     {
-        $this->preco = $preco;
+        if ($preco > 0) {
+            $this->preco = $preco;
+        }
     }
 
     public function detalhes(): void

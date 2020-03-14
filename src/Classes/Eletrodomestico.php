@@ -4,7 +4,7 @@ namespace App\Classes;
 
 class Eletrodomestico extends Produto
 {
-    public int $voltagem;
+    private int $voltagem;
 
     public string $descricao = "Eletrodomestico em geral";
 
@@ -15,7 +15,9 @@ class Eletrodomestico extends Produto
 
     public function defineCodigoBarras(string $codigo): void
     {
-        $this->codigoBarras = $codigo;
+        if (\strlen($codigo) > 3) {
+            $this->codigoBarras = $codigo;
+        }
     }
 
     protected function definirVoltagem(int $voltagem): void

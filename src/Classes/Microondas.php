@@ -4,7 +4,7 @@ namespace App\Classes;
 
 final class Microondas extends Eletrodomestico
 {
-    public int $potencia;
+    private int $potencia;
 
     public string $descricao = "Microondas em geral";
 
@@ -17,7 +17,9 @@ final class Microondas extends Eletrodomestico
 
     final public function defineCodigoBarras(string $codigo): void
     {
-        $this->codigoBarras = $codigo;
+        if (\strlen($codigo) > 4) {
+            $this->codigoBarras = $codigo;
+        }
     }
 
     public function definirPotencia(int $potencia): void
