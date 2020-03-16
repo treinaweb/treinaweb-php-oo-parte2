@@ -4,6 +4,8 @@ namespace App\Classes;
 
 abstract class Pessoa 
 {
+   protected int $id;
+
    private string $nome;
    
    private int $idade;
@@ -11,7 +13,9 @@ abstract class Pessoa
    public string $endereco;
    
    private string $telefone;
-    
+   
+   abstract public function setId(int $id): void;
+
    public function setNome($nome): void
    {
        $this->nome = $nome;

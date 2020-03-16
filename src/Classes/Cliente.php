@@ -4,6 +4,11 @@ namespace App\Classes;
 
 class Cliente extends Pessoa
 {
+    public function setId(int $id): void
+    {
+        $this->id = $id + 1000;
+    }
+
     public function __set(string $nomePropriedade, $valorPropriedade): void
     {
         if ($nomePropriedade === 'cpf') {
