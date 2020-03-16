@@ -3,9 +3,8 @@
 namespace App\Classes;
 
 use App\Interfaces\Imprimivel;
-use App\Interfaces\Retornavel;
 
-class Produto implements Imprimivel, Retornavel
+class Produto implements Imprimivel
 {
     public const NORMA = "1050";
 
