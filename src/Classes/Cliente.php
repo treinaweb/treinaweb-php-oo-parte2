@@ -2,23 +2,8 @@
 
 namespace App\Classes;
 
-class Cliente
+class Cliente extends Pessoa
 {
-    public string $nome;
-
-    public int $idade;
-
-    public string $endereco;
-
-    public string $telefone;
-
-    public function __construct(string $nome, string $telefone, int $idade)
-    {
-        $this->nome = $nome;
-        $this->telefone = $telefone;
-        $this->idade = $idade;
-    }
-
     public function __set(string $nomePropriedade, $valorPropriedade): void
     {
         if ($nomePropriedade === 'cpf') {
@@ -73,7 +58,7 @@ class Cliente
 
     public function __destruct()
     {
-        echo "O obj foi destruido";
+        //echo "O obj foi destruido";
     }
 }
 
