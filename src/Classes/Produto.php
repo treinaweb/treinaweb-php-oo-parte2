@@ -2,7 +2,9 @@
 
 namespace App\Classes;
 
-class Produto 
+use App\Interfaces\Imprimivel;
+
+class Produto implements Imprimivel
 {
     public const NORMA = "1050";
 
