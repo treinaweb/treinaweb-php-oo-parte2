@@ -3,15 +3,13 @@
 namespace App\Email;
 
 use App\Classes\Cliente;
-use App\Email\Adaptadores\Mailgun\Adaptador as Mailgun;
-use App\Email\Adaptadores\SES\Adaptador as SES;
-use App\Email\Adaptadores\AdaptadorBase;
+use App\Email\Adaptadores\AdaptadorInterface;
 
 const VERSAO = 1.0;
 
 class Envio 
 {
-    public function enviar(AdaptadorBase $adaptador): void
+    public function enviar(AdaptadorInterface $adaptador): void
     {
         $adaptador->processar();
 

@@ -9,4 +9,4 @@ $ses = new App\Email\Adaptadores\SES\Adaptador;
 
 $base = new App\Email\Adaptadores\AdaptadorBase;
 
-$email->enviar($base);
+$email->enviar($mailgun);
