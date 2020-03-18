@@ -2,8 +2,12 @@
 
 namespace App\Classes;
 
+use App\Traits\Imprimir;
+
 class Pedido
 {
+    use Imprimir;
+
     private Cliente $cli;
 
     private Produto $prod;
