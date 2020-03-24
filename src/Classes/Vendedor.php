@@ -6,8 +6,14 @@ class Vendedor
 {
     static public float $bonus = 1.2;
 
-    static public function comissao(): float
+    static public float $comissao = 2.5;
+
+    static public function comissao(bool $temBonus): float
     {
-        return 2.5;
+        if ($temBonus) {
+            return self::$comissao * self::$bonus;
+        }
+
+        return self::$comissao;
     }
 }
