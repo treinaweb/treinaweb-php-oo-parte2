@@ -3,12 +3,15 @@
 require_once "../autoload/autoload-psr4.php";
 
 use App\Classes\Vendedor;
+use App\Classes\Representante;
 
-var_dump(Vendedor::$bonus);
+echo Representante::comissao(false);
 
-Vendedor::$bonus = 1.5;
+// var_dump(Vendedor::$bonus);
 
-echo Vendedor::CalculaComissao(true, 100_000);
+// Vendedor::$bonus = 1.5;
 
-var_dump(Vendedor::$bonus);
+// echo Vendedor::CalculaComissao(true, 100_000);
+
+// var_dump(Vendedor::$bonus);
 
