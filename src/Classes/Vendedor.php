@@ -19,7 +19,7 @@ class Vendedor
 
     static public function calculaComissao(bool $temBonus, float $valor): float
     {
-        $porcentageComissao = self::comissao($temBonus) / 100;
+        $porcentageComissao = static::comissao($temBonus) / 100;
 
         return $porcentageComissao * $valor;
     }
